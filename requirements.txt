@@ -1,0 +1,8 @@
+# Reconhecedor_entidade_nomeada/app.py: 2
+Flask == 1.1.2
+
+# Reconhecedor_entidade_nomeada/app.py: 3
+flask-markdown == 0.3
+
+# Reconhecedor_entidade_nomeada/process_entity_named.py: 1,2
+spacy == 2.2.3
