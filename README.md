@@ -6,11 +6,15 @@
 
 Requisitos:
 
-* Python
-  * spacy
-  * flask
-  * flask-markdown 
+    Python
+    spacy
+    flask
+    flask-markdown 
 
+<p>Para executar, instale as bibliotecas necessárias e execute o arquivo app.py</p>
+
+    python3 -m pip install -r requirements.txt
+    
 Imagens projeto rodando
 ![GitHub Logo](/imagem/home.png)
 
