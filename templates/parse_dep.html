@@ -33,30 +33,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
-    <title>Reconhecimento de entidades nomeada (NER)</title>
+    <title>Análise de dependência</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    
+
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/"> Entidades Nomeada(NER) <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Entidades Nomeada(NER)<span class="sr-only">(current)</span></a>
           </li>
-            <li class="nav-item">
-        <a class="nav-link" href="/parse_dep">Análise de dependência</a>
-      </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="/parse_dep">Análise de dependência</a>
+          </li>
         </ul>
-
+         
       </div>
     </nav>
     
     
     <div class="jumbotron">  
     <br>
-        <h3><b>Reconhecimento de Entidades Nomeada (NER)</b></h3><br>
-        <p> O <b>reconhecimento de entidades nomeada (NER)</b> é um ramo do processamento de linguagem natural que procura extrair e classificar as entidades mencionadas em um texto escrito em linguagem natural.<br> Para essa tarefa, utiliza-se conhecimentos de linguística computacional para manipular as palavras e um texto segundo sua classe gramatical e fazer inferências sobre os límites da entidade e sua classificação..</p>
-        <form method="POST" action="{{ url_for('process')}}" >
+        <h3><b>Análise de dependência</b></h3><br>
+        <p><b>Análise de dependência consiste em obter uma estrutura sintática correspondente a determinado texto da linguagem natural.</p>
+        <form method="POST" action="{{ url_for('process_parse')}}" >
 
             <textarea  rows="5" cols="5" placeholder="Informe um texto para processamento" required="true" name="query" class="form-control"></textarea>
             <dic class="container">
