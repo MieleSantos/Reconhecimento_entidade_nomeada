@@ -12,19 +12,27 @@ Markdown(app)
 
 @app.route("/")
 def index():
+    """
+    Rota para pagina index
 
+    Returns:
+        [Page]: Retorna a pagina para ser renderizada 
+    """
     return render_template('index.html' )
 
 
 @app.route("/process", methods=['GET','POST'])
 def process():
-
+    """
+    Rota que vai receber um post com os dados, fazer o processamento na usando a
+    função process_entity e retorna as entidades nomeadas
+    """
     if request.method == 'POST':
-
+        #obtendo o dado do form
         query = request.form['query']    
-        
+        #obtendo as entidades nomeadas pr
         obj_html = process_entity(query)
-        
+        #formatando os dados para serem exibidos no front
         result = HTML_WRAPPER.format(obj_html)
 
     return render_template('result.html', query=query ,result=result)
@@ -36,14 +44,18 @@ def result():
 
 @app.route("/result_parse", methods=['GET','POST'])
 def process_parse():
+    """
+    Rota que vai receber um post com os dados, fazer o processamento na usando a
+    função process_parse_dependency e retorna o parse de denpendencia
+    """
 
     if request.method == 'POST':
-
+        #obtendo o dado do form
         query = request.form['query']    
-        
+        #obtendo o parse de dependencia
         obj_html = process_parse_dependency(query)
+        #formatando os dados para serem exibidos no front
         result = HTML_WRAPPER.format(obj_html)
-
 
     return render_template('result_parse.html', query=query ,result=result)
 

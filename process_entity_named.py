@@ -41,6 +41,10 @@ def obj_nlp():
     Returns:
         [Objeto]: Instancia do spacy
     """
-    nlp = spacy.load('pt')
+    #modelo de melhor eficiencia
+    nlp = spacy.load("pt_core_news_sm")
+    #modelo melhor acuracia
+    # nlp = spacy.load("pt_core_news_lg")
+
     
     return nlp
